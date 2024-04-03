@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HALAMAN PENDAFTARAN</title>
+    <link rel="stylesheet" type="text/css" href="css/pendaftaran.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h2 class="logo"><i class="fas fa-paw"></i>Amanda's Registration Page</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="profile.html">Profile</a>
+            <a href="jadwalperkuliahan.html">Jadwal Perkuliahan</a>
+            <button class="popup-login">Login</button>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <span class="close"><i class="fas fa-times"></i></span>
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#" method="post">
+                <div class="form-input">
+                    <span class="icon"><i class="fas fa-envelope"></i></span>      
+                    <input type="email" name="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="form-input">
+                    <span class="icon"><i class="fas fa-lock"></i></span>      
+                    <input type="password" name="password" required>
+                    <label>Password</label> 
+                </div>
+                <div class="remember-forgot">      
+                    <label><input type="checkbox" name="remember">Remember Me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account?? <a href="#" class="register-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+        <div class="form-box register">
+            <h2>Registration</h2>
+            <form action="#" method="post">
+                <div class="form-input">
+                    <span class="icon"><i class="fas fa-user"></i></span>      
+                    <input type="text" name="username" required>
+                    <label>Username</label>
+                </div>
+                <div class="form-input">
+                    <span class="icon"><i class="fas fa-envelope"></i></span>      
+                    <input type="email" name="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="form-input">
+                    <span class="icon"><i class="fas fa-lock"></i></span>      
+                    <input type="password" name="password" required>
+                    <label>Password</label> 
+                </div>
+                <div class="remember-forgot">      
+                    <label><input type="checkbox" name="remember">I agree with all the Terms and Condition</label>
+                </div>
+                <button type="submit" class="btn">Sign in</button>
+                <div class="login-register">
+                    <p>Already have an account?? <a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", function() {
+    const wrapper = document.querySelector('.wrapper');
+    const loginlink = document.querySelector('.login-link');
+    const registerlink = document.querySelector('.register-link');
+    const btnpopup = document.querySelector('.popup-login');
+    const iconclose = document.querySelector('.close');
+
+    // Fungsi untuk menampilkan pesan welcome
+    function showWelcomeMessage() {
+        alert('Hi dear! Welcome to our community!Halaman ini dibuat untuk UTS Web');
+    }
+
+    // Tambahkan event listener untuk form login
+    wrapper.querySelector('.form-box.login form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Mencegah pengiriman form
+        showWelcomeMessage(); // Memanggil fungsi pesan welcome
+        // Tambahkan logika login di sini
+    });
+
+    // Tambahkan event listener untuk form registrasi
+    wrapper.querySelector('.form-box.register form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Mencegah pengiriman form
+        showWelcomeMessage(); // Memanggil fungsi pesan welcome
+        // Tambahkan logika registrasi di sini
+    });
+
+    registerlink.addEventListener('click', () => {
+        wrapper.classList.add('active');
+        wrapper.querySelector('.form-box.register').classList.add('active');
+        wrapper.querySelector('.form-box.login').classList.remove('active');
+    });
+
+    loginlink.addEventListener('click', () => {
+        wrapper.classList.remove('active');
+        wrapper.querySelector('.form-box.login').classList.add('active');
+        wrapper.querySelector('.form-box.register').classList.remove('active');
+    });
+
+    btnpopup.addEventListener('click', () => {
+        wrapper.classList.add('active-popup');
+        wrapper.querySelector('.form-box.login').classList.add('active');
+        wrapper.querySelector('.form-box.register').classList.remove('active');
+    });
+
+    iconclose.addEventListener('click', () => {
+        wrapper.classList.remove('active-popup');
+    });
+});
+
+    </script>
+</body>
+</html>

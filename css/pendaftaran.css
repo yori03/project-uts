@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Calibri', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(bg.jpg);
+    background-size: cover;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 32px;
+}
+
+nav a {
+    position: relative;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    margin-left: 40px;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%; /* Menyesuaikan lebar dengan lebar teks */
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scale(0);
+    transition: transform .5s;
+}
+
+nav a:hover::after {
+    transform-origin: left;
+    transform: scale(1);
+}
+
+nav .popup-login {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid black;
+    outline: none;
+    border-radius: 6px;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    margin-left: 40px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+nav .popup-login:hover {
+    background: white;
+    color: #162938;
+}
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+    display: none; /* Tambahkan properti display none untuk menyembunyikan form */
+}
+
+.wrapper .form-box.active {
+    display: block; /* Tambahkan properti display block untuk menampilkan form yang aktif */
+}
+
+.wrapper .form-box h2 {
+    font-size: 32px;
+    color: black;
+    text-align: center;
+    margin-bottom: 20px; /* Menambah margin bawah */
+}
+
+.wrapper .close {
+    position: absolute;
+    top: 0; /* Mengubah nilai top menjadi 0 */
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    font-size: 32px;
+    color: black;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.form-input {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid black;
+    margin: 20px 0; /* Mengurangi margin atas dan bawah */
+}
+
+.form-input label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: black;
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.form-input input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 35px 0 5px;
+}
+
+.form-input input:focus~label,
+.form-input input:valid~label {
+    top: -5px;
+}
+
+.form-input .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 20px;
+    color: black;
+    line-height: 57px;
+}
+
+.remember-forgot {
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+    margin: 10px 0; /* Mengurangi margin atas dan bawah */
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input {
+    accent-color: black;
+    margin-left: 3px;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: midnightblue;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px; /* Menambah margin atas */
+}
+
+.login-register {
+    font-weight: bold;
+    color: black;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px; /* Menambah margin atas */
+}
+
+.login-register p a {
+    color: black;
+    font-weight: bold;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}
