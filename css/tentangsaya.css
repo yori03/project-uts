@@ -83,7 +83,7 @@ main .content .content-description p {
 }
 main .content .content-description button {
     padding: 0.8rem 2.5rem;
-    margin-top: 1rem; /* Mengubah properti margin-block-start menjadi margin-top */
+    margin-top: 1rem; 
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1rem;

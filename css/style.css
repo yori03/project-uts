@@ -8,7 +8,7 @@
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(background.jpeg); 
-    background-size: cover; /* Agar gambar menutupi seluruh background */
+    background-size: cover; 
     background-position: center; /* Posisi gambar di tengah */
     /* Jika Anda juga ingin menambahkan overlay transparan, Anda dapat menggunakan linear-gradient */
 }
